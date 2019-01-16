@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>模拟组合</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/app-common.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css" />-->
+		<style>
+			.mui-card .mui-control-content {
+				padding: 10px;
+			}
+			
+			.mui-control-content {
+				height: 150px;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">模拟组合</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-input-row mui-search ra-search" >
+				<input type="search" class="mui-input-clear" placeholder="请搜索">
+			</div>
+			<div style="padding: 0px 10px 10px 10px;">
+				<div id="segmentedControl" class="mui-segmented-control">
+					<a class="mui-control-item mui-active" href="#item1">股票等权</a>
+					<a class="mui-control-item" href="#item2">现金</a>
+					<a class="mui-control-item" href="#item3">指数等权</a>
+				</div>
+			</div>
+			<div>
+				<div id="item1" class="mui-control-content mui-active">
+					<div>
+						<div>
+							<ul class="mui-table-view">
+								<li class="mui-table-view-cell mock-cell list-title">
+									<div class="mui-row">
+										<div class="mui-row">
+											<div class="mui-col-sm-6 mock-base">
+														组合名称  
+											</div>
+											<div class="mui-col-sm-3 mock-base">
+														基准名称   
+											</div>
+											<div class="mui-col-sm-3 mock-base">
+														创建人   
+											</div>
+										</div>
+										<div class="mui-row">
+											<div class="mui-col-sm-2 mock-income" >
+														日收率  
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														日基收  
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														日超收    
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														累收率  
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														累基收   
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														累超收     
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mui-table-view-cell mock-cell">
+									<div class="mui-row">
+										<div class="mui-row">
+											<div class="mui-col-sm-6 mock-base">
+														休闲服务组合  
+											</div>
+											<div class="mui-col-sm-3 mock-base">
+														休闲服务   
+											</div>
+											<div class="mui-col-sm-3 mock-base">
+														常宁   
+											</div>
+										</div>
+										<div class="mui-row">
+											<div class="mui-col-sm-2 mock-income" >
+														-4.34%  
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														-2.30%  
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														-2.04%    
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														-4.34%  
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														-2.30%   
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														-2.04%     
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mui-table-view-cell mock-cell">
+									<div class="mui-row">
+										<div class="mui-row">
+											<div class="mui-col-sm-6 mock-base">
+														医药行业组合  
+											</div>
+											<div class="mui-col-sm-3 mock-base">
+														医药生物   
+											</div>
+											<div class="mui-col-sm-3 mock-base">
+														张晓   
+											</div>
+										</div>
+										<div class="mui-row">
+											<div class="mui-col-sm-2 mock-income" >
+														-1.01%  
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														-2.61%  
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														1.60%    
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														-1.61%  
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														-2.61%  
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														1.60%     
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="mui-table-view-cell mock-cell">
+									<div class="mui-row">
+										<div class="mui-row">
+											<div class="mui-col-sm-6 mock-base">
+														医药生物行业模拟组合  
+											</div>
+											<div class="mui-col-sm-3 mock-base">
+														医药生物   
+											</div>
+											<div class="mui-col-sm-3 mock-base">
+														孙    蔚   
+											</div>
+										</div>
+										<div class="mui-row">
+											<div class="mui-col-sm-2 mock-income" >
+														-2.78%  
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														-2.61%  
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														-0.17%    
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														-2.78%  
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														-2.61%  
+											</div>
+											<div class="mui-col-sm-2 mock-income">
+														-0.17%    
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div id="item2" class="mui-control-content">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mock-cell">
+							<div class="mui-row">
+								<div class="mui-row">
+									<div class="mui-col-sm-6 mock-base">
+												休闲服务组合  
+									</div>
+									<div class="mui-col-sm-3 mock-base">
+												休闲服务   
+									</div>
+									<div class="mui-col-sm-3 mock-base">
+												常宁   
+									</div>
+								</div>
+								<div class="mui-row">
+									<div class="mui-col-sm-2 mock-income" >
+												-4.34%  
+									</div>
+									<div class="mui-col-sm-2 mock-income">
+												-2.30%  
+									</div>
+									<div class="mui-col-sm-2 mock-income">
+												-2.04%    
+									</div>
+									<div class="mui-col-sm-2 mock-income">
+												-4.34%  
+									</div>
+									<div class="mui-col-sm-2 mock-income">
+												-2.30%   
+									</div>
+									<div class="mui-col-sm-2 mock-income">
+												-2.04%     
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="mui-table-view-cell mock-cell">
+							<div class="mui-row">
+								<div class="mui-row">
+									<div class="mui-col-sm-6 mock-base">
+												医药行业组合  
+									</div>
+									<div class="mui-col-sm-3 mock-base">
+												医药生物   
+									</div>
+									<div class="mui-col-sm-3 mock-base">
+												张晓   
+									</div>
+								</div>
+								<div class="mui-row">
+									<div class="mui-col-sm-2 mock-income" >
+												-1.01%  
+									</div>
+									<div class="mui-col-sm-2 mock-income">
+												-2.61%  
+									</div>
+									<div class="mui-col-sm-2 mock-income">
+												1.60%    
+									</div>
+									<div class="mui-col-sm-2 mock-income">
+												-1.61%  
+									</div>
+									<div class="mui-col-sm-2 mock-income">
+												-2.61%  
+									</div>
+									<div class="mui-col-sm-2 mock-income">
+												1.60%     
+									</div>
+								</div>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+				<div id="item3" class="mui-control-content">
+					<ul class="mui-table-view">
+						<li class="mui-table-view-cell mock-cell">
+							<div class="mui-row">
+								<div class="mui-row">
+									<div class="mui-col-sm-6 mock-base">
+												医药生物行业模拟组合  
+									</div>
+									<div class="mui-col-sm-3 mock-base">
+												医药生物   
+									</div>
+									<div class="mui-col-sm-3 mock-base">
+												孙    蔚   
+									</div>
+								</div>
+								<div class="mui-row">
+									<div class="mui-col-sm-2 mock-income" >
+												-2.78%  
+									</div>
+									<div class="mui-col-sm-2 mock-income">
+												-2.61%  
+									</div>
+									<div class="mui-col-sm-2 mock-income">
+												-0.17%    
+									</div>
+									<div class="mui-col-sm-2 mock-income">
+												-2.78%  
+									</div>
+									<div class="mui-col-sm-2 mock-income">
+												-2.61%  
+									</div>
+									<div class="mui-col-sm-2 mock-income">
+												-0.17%    
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script>
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			(function($) {
+				 mui(".mui-table-view").on('click','.mock-cell',function(){
+					var webview = mui.openWindow({
+						url:'mock_details.html',
+						extras:{
+							mockId:'10'  //扩展参数
+						}
+					});
+				}) 
+				
+				$('#scroll').scroll({
+					indicators: true //是否显示滚动条
+				});
+				var segmentedControl = document.getElementById('segmentedControl');
+				$('.mui-input-group').on('change', 'input', function() {
+					if (this.checked) {
+						var styleEl = document.querySelector('input[name="style"]:checked');
+						var colorEl = document.querySelector('input[name="color"]:checked');
+						if (styleEl && colorEl) {
+							var style = styleEl.value;
+							var color = colorEl.value;
+							segmentedControl.className = 'mui-segmented-control' + (style ? (' mui-segmented-control-' + style) : '') + ' mui-segmented-control-' + color;
+						}
+					}
+				});
+			})(mui);
+		</script>
+
+	</body>
+
+</html>

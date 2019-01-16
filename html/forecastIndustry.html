@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>行业预测</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/app-common.css">
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css"/>-->
+		<style>
+			h5 {
+				margin-top: 30px;
+				font-weight: bold;
+			}
+			h5:first-child {
+				margin-top: 15px;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">行业预测</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-input-row mui-search ra-search" id="industrySearch">
+				<input type="search" class="mui-input-clear" placeholder="搜索">
+			</div>
+			<div class="mui-card" style="margin-top: 0px;">
+				<ul class="mui-table-view">
+					<li class="mui-table-view-cell mui-collapse list-title">
+						<div class="mui-row">
+							<div class="mui-col-sm-2">
+										预测行业  
+							</div>
+							<div class="mui-col-sm-2">
+										研究员 
+							</div>
+							<div class="mui-col-sm-3">
+										开始日期   
+							</div>
+							<div class="mui-col-sm-1">
+										期限   
+							</div>
+							<div class="mui-col-sm-2">
+										预测建议   
+							</div>
+							<div class="mui-col-sm-2">
+										收益率   
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" id="test" href="#">
+							<div class="mui-row">
+								<div class="mui-col-sm-2">
+											有色金属  
+								</div>
+								<div class="mui-col-sm-2">
+											庄嘉赟 
+								</div>
+								<div class="mui-col-sm-3">
+											2018-01-14   
+								</div>
+								<div class="mui-col-sm-1">
+											3   
+								</div>
+								<div class="mui-col-sm-2">
+											中性   
+								</div>
+								<div class="mui-col-sm-2">
+											-1.15%   
+								</div>
+							</div>
+						</a>
+						<div class="mui-collapse-content">
+							<div class="mui-content-padded">
+								<div class="chart" id="industryForecastTraceChart" style="width: 400px;"></div>
+							</div>
+							<div>
+								有色基本金属目前催化剂较少，但低库存孕育着未来的机会。从子版块来看，黄金由于风险偏好上升，以及人民币升值，人民币黄金近期较为疲弱，黄金板块建议低配。另外，子版块锌冶炼建议增配，18年年初至今，锌加工费一路上涨，已经到了过去五年来的最高水平
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">
+							<div class="mui-row">
+								<div class="mui-col-sm-2">
+											传媒  
+								</div>
+								<div class="mui-col-sm-2">
+											黄灿 
+								</div>
+								<div class="mui-col-sm-3">
+											2018-01-11   
+								</div>
+								<div class="mui-col-sm-1">
+											3   
+								</div>
+								<div class="mui-col-sm-2">
+											中性   
+								</div>
+								<div class="mui-col-sm-2">
+											0.42%   
+								</div>
+							</div>
+						</a>
+						<div class="mui-collapse-content">
+							<div class="mui-content-padded">
+								<div class="chart" id="lineChart2" style="width: 400px;"></div>
+							</div>
+							<div>
+								有色基本金属目前催化剂较少，但低库存孕育着未来的机会。从子版块来看，黄金由于风险偏好上升，以及人民币升值，人民币黄金近期较为疲弱，黄金板块建议低配。另外，子版块锌冶炼建议增配，18年年初至今，锌加工费一路上涨，已经到了过去五年来的最高水平
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right" href="#">
+							<div class="mui-row">
+								<div class="mui-col-sm-2">
+											医药生物  
+								</div>
+								<div class="mui-col-sm-2">
+											张晓 
+								</div>
+								<div class="mui-col-sm-3">
+											2018-01-10   
+								</div>
+								<div class="mui-col-sm-1">
+											3   
+								</div>
+								<div class="mui-col-sm-2">
+											中性   
+								</div>
+								<div class="mui-col-sm-2">
+											-0.38%   
+								</div>
+							</div>
+						</a>
+						<div class="mui-collapse-content">
+							<div class="mui-content-padded">
+								<div class="chart" id="lineChart3" style="width: 400px;"></div>
+							</div>
+							<div>
+								2019Q1医药行业在政策端和业绩端有一定的压力。在政策端来看，药品全国带量采购政策已经落地，但后续各省市的联动仍有待观察；耗材部分近期各省陆续出台集采降价政策，Q1预计会看到具体的降幅数据；重点用药目录监控政策也有望在Q1出最终的名单。在业绩端来看，2018Q1是医药行业近年来增速最快的季度，有流感和大宗原料药涨价的双重促进；2019Q1在新一轮招标降价的基础上，叠加去年高基数影响，表观业绩端增速承压。
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../libs/echarts.min.js"></script>
+		<script src="../libs/test_data.js"></script>
+		<script>
+			mui.init({
+				swipeBack:true //启用右滑关闭功能
+			});
+			(function($) {
+				$('#scroll').scroll({
+					indicators: true //是否显示滚动条
+				});
+				mui(".mui-table-view").on('tap','.mui-navigate-right',function(){
+				 	drawInduForecastTrace("industryForecastTraceChart");
+					echarts.getInstanceByDom(document.getElementById("industryForecastTraceChart")).resize();
+					drawInduForecastTrace("lineChart2");
+					echarts.getInstanceByDom(document.getElementById("lineChart2")).resize();
+					drawInduForecastTrace("lineChart3");
+					echarts.getInstanceByDom(document.getElementById("lineChart3")).resize();
+				 })
+			})(mui);
+			/* mui(".mui-table-view").on('tap','.mui-navigate-right',function(){
+				industryForecastTrace();
+				var lineChart = echarts.init(byId('lineChart'));
+				lineChart.setOption(getOption('line')); 
+				/* var lineChart2 = echarts.init(byId('lineChart2'));
+				lineChart2.setOption(getOption('line'));
+				var lineChart3 = echarts.init(byId('lineChart3'));
+				lineChart3.setOption(getOption('line'));
+			}) 
+			 */
+
+			var getOption = function(chartType) {
+				var chartOption = chartType == 'pie' ? {
+					calculable: false,
+					series: [{
+						name: '访问来源',
+						type: 'pie',
+						radius: '65%',
+						center: ['50%', '50%'],
+						data: [{
+							value: 335,
+							name: '直接访问'
+						}, {
+							value: 310,
+							name: '邮件营销'
+						}, {
+							value: 234,
+							name: '联盟广告'
+						}, {
+							value: 135,
+							name: '视频广告'
+						}, {
+							value: 1548,
+							name: '搜索引擎'
+						}]
+					}]
+				} : {
+					legend: {
+						data: ['蒸发量1', '降水量']
+					},
+					grid: {
+						x: 35,
+						x2: 10,
+						y: 30,
+						y2: 25
+					},
+					toolbox: {
+						show: false,
+						feature: {
+							mark: {
+								show: true
+							},
+							dataView: {
+								show: true,
+								readOnly: false
+							},
+							magicType: {
+								show: true,
+								type: ['line', 'bar']
+							},
+							restore: {
+								show: true
+							},
+							saveAsImage: {
+								show: true
+							}
+						}
+					},
+					calculable: false,
+					xAxis: [{
+						type: 'category',
+						data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+					}],
+					yAxis: [{
+						type: 'value',
+						splitArea: {
+							show: true
+						}
+					}],
+					series: [{
+						name: '蒸发量',
+						type: chartType,
+						data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+					}, {
+						name: '降水量',
+						type: chartType,
+						data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+					}]
+				};
+				return chartOption;
+			};
+			var byId = function(id) {
+				return document.getElementById(id);
+			};
+			function drawInduForecastTrace(id){
+				var o = document.getElementById("industrySearch");
+				var w = o.clientWidth||o.offsetWidth;
+				document.getElementById(id).style.width=(w-50)+"px";
+				  var dte=[];
+				  var data=[];
+				  for(var i=0;i<industryForecastTrace.length;i++){
+					  dte.push(industryForecastTrace[i].pubdate);
+					  data.push(industryForecastTrace[i].dRate);
+				  }
+				  var industryForecastTraceOption={
+					legend: {
+						data: ['收益率']
+					},
+					tooltip: {trigger: 'axis'},
+					toolbox: {
+						show: false,
+					},
+					grid: [{
+						containLabel: true,
+						left: 0,
+						right: 20,
+						top: 30,
+						bottom: 30
+					}],
+					xAxis: [{
+						type: 'category',
+						data:dte
+					}],
+					yAxis: [{
+						type: 'value',
+					}],
+					series: [{
+						name: '收益率',
+						type: 'line',
+						data:data
+					}]
+				  }
+				  var industryForecastTraceChart = echarts.init(document.getElementById(id));
+				  industryForecastTraceChart.setOption(industryForecastTraceOption);
+			}
+			
+			
+		</script>
+	</body>
+
+</html>

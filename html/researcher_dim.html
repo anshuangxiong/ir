@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>研究员维度</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/app-common.css">
+	<!-- 	<link href="../css/mui.picker.css" rel="stylesheet" /> -->
+		<link href="../css/mui.poppicker.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../css/mui.picker.min.css" />
+		<!--App自定义的css-->
+		<!--<link rel="stylesheet" type="text/css" href="../css/app.css" />-->
+		<style>
+			.mui-card .mui-control-content {
+				padding: 10px;
+			}
+			
+			.mui-control-content {
+				height: 150px;
+			}
+			.chartWidth{
+				width:100%;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">研究员维度</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-card">
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<div class="mui-row">
+							<div class="mui-col-sm-3" >
+								<img style="border-radius:50px" src="../images/user_zhangx.gif" width="100px" height="100px" />
+							</div>
+							<div class="mui-col-sm-9">
+								<div class="mui-row" style="font-size: 30px;height: 40px;">
+									<div class="mui-col-sm-12" style="padding: 5px;">张晓</div>
+								</div>
+								<div class="mui-input-row" style="height: 1px;"></div>
+								<div class="mui-row">
+									<div class="mui-col-sm-12">跟踪行业：其他行业 医药生物</div>
+								</div>
+								<div class="mui-row">
+									<div class="mui-col-sm-12">跟踪股票：康龙化成 艾德生物 长春高新  </div>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="padding: 0px 10px 10px 10px;">
+				<div id="segmentedControl" class="mui-segmented-control">
+					<a class="mui-control-item mui-active" href="#item1">研究报告</a>
+					<a class="mui-control-item" href="#item2">行业预测</a>
+					<a class="mui-control-item" href="#item3">投资建议</a>
+					<a class="mui-control-item" href="#item4">调研计划</a>
+				</div>
+			</div>
+			<div>
+				<div id="item1" class="mui-control-content mui-active">
+					<div class="chart" id="researchReportChart"></div>
+					<div class="mui-card" style="margin-top: 0px;">
+						<div class="mui-card-header">
+							<button id='showReportTypePicker' class="mui-btn" type='button'>全部报告</button>
+						</div>
+						<div class="mui-card-content">
+							<div class="mui-card-content-inner">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell mui-collapse list-title">
+										<div class="mui-row">
+											<div class="mui-col-sm-3">
+														报告类型  
+											</div>
+											<div class="mui-col-sm-9">
+														标题   
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell mui-collapse">
+										<a class="mui-navigate-right" href="#">
+											<div class="mui-row">
+												<div class="mui-col-sm-3">
+															跟踪报告  
+												</div>
+												<div class="mui-col-sm-9">
+															长春高新2018年年报预告点评   
+												</div>
+											</div>
+										</a>
+										<div class="mui-collapse-content">
+											<div class="mui-input-group">
+												<div class="mui-row">
+													<div class="mui-col-sm-3" style="padding: 15px;">
+														报告日期
+													</div>
+													<div class="mui-col-sm-9" style="padding: 15px;">
+														2019-01-15
+													</div>
+												</div>
+												<div class="mui-input-row" style="height: 1px;"></div>
+												<div class="mui-row">
+													<div class="mui-col-sm-3" style="padding: 15px;">
+														相关股票
+													</div>
+													<div class="mui-col-sm-9" style="padding: 15px;">
+														长春高新
+													</div>
+												</div>
+												<div class="mui-input-row" style="height: 1px;"></div>
+												<div class="mui-row">
+													<div class="mui-col-sm-3" style="padding: 15px;">
+														相关行业
+													</div>
+													<div class="mui-col-sm-9" style="padding: 15px;">
+														医药生物
+													</div>
+												</div>
+												<div class="mui-input-row" style="height: 1px;"></div>
+												<div class="mui-row">
+													<div class="mui-col-sm-3" style="padding: 15px;">
+														概要
+													</div>
+													<div class="mui-col-sm-9" style="padding: 15px;">
+														公司预告2018年净利润9.27亿元~10.6亿元，同比增长40%~60%。按照预告中值9.9亿元来看，业绩端比预期略好，市场预期净利润9.5~10亿元。预计公司2018~2020年净利润分别为9.9亿、13.2亿、17.3亿元，同比增长50%、33%、31%，对应PE分别为29X、22X、17X。维持买入评级。
+		另外，对于市场流传的公司近期大会上提到的儿科事业部新患和纯销增长目标，新患2019年目标8.3万人（+49%），纯销2019年目标43亿元（+50%）。公司以往目标的达成率一般都在95%左右，从公司指标来看给的增速要求仍然很高，目前市场对于生长激素2019年整体预期收入端+40%，新患端+35%；公司2018年11月、12月新患增长数据不佳，一季度新患增长数据比较关键，后续持续跟踪。
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell mui-collapse">
+										<a class="mui-navigate-right" href="#">
+											<div class="mui-row">
+												<div class="mui-col-sm-3">
+															跟踪报告  
+												</div>
+												<div class="mui-col-sm-9">
+																艾德生物2018年年报预告点评   
+												</div>
+											</div>
+										</a>
+										<div class="mui-collapse-content">
+											<div class="mui-input-group">
+												<div class="mui-row">
+													<div class="mui-col-sm-3" style="padding: 15px;">
+														报告日期
+													</div>
+													<div class="mui-col-sm-9" style="padding: 15px;">
+														2019-01-10
+													</div>
+												</div>
+												<div class="mui-input-row" style="height: 1px;"></div>
+												<div class="mui-row">
+													<div class="mui-col-sm-3" style="padding: 15px;">
+														相关股票
+													</div>
+													<div class="mui-col-sm-9" style="padding: 15px;">
+														艾德生物
+													</div>
+												</div>
+												<div class="mui-input-row" style="height: 1px;"></div>
+												<div class="mui-row">
+													<div class="mui-col-sm-3" style="padding: 15px;">
+														相关行业
+													</div>
+													<div class="mui-col-sm-9" style="padding: 15px;">
+														医药生物
+													</div>
+												</div>
+												<div class="mui-input-row" style="height: 1px;"></div>
+												<div class="mui-row">
+													<div class="mui-col-sm-3" style="padding: 15px;">
+														概要
+													</div>
+													<div class="mui-col-sm-9" style="padding: 15px;">
+														预计2018年净利润1.25亿~1.3亿元，同比增长32.89%~38.20%；其中非经常损益1818万元，扣非净利润同比增长33%~40%，业绩端符合预期。四季度单季扣非净利润增长56%~88%。
+		公司整体利润体量不大，季度之间同比增长存在一定的波动。之前三季度公司由于2017年同期产品在日本获批导致高基数，叠加2018Q3集中对费用端进行一次性计提因素，导致公司三季度单季度扣非只有个位数增长，四季度公司业绩端恢复明显。
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell mui-collapse">
+										<a class="mui-navigate-right" href="#">
+											<div class="mui-row">
+												<div class="mui-col-sm-3">
+															跟踪报告  
+												</div>
+												<div class="mui-col-sm-9">
+															康龙化成新股报告   
+												</div>
+											</div>
+										</a>
+										<div class="mui-collapse-content">
+											<div class="mui-input-group">
+												<div class="mui-row">
+													<div class="mui-col-sm-3" style="padding: 15px;">
+														报告日期
+													</div>
+													<div class="mui-col-sm-9" style="padding: 15px;">
+														2019-01-08
+													</div>
+												</div>
+												<div class="mui-input-row" style="height: 1px;"></div>
+												<div class="mui-row">
+													<div class="mui-col-sm-3" style="padding: 15px;">
+														相关股票
+													</div>
+													<div class="mui-col-sm-9" style="padding: 15px;">
+														康龙化成 
+													</div>
+												</div>
+												<div class="mui-input-row" style="height: 1px;"></div>
+												<div class="mui-row">
+													<div class="mui-col-sm-3" style="padding: 15px;">
+														相关行业
+													</div>
+													<div class="mui-col-sm-9" style="padding: 15px;">
+														其他行业
+													</div>
+												</div>
+												<div class="mui-input-row" style="height: 1px;"></div>
+												<div class="mui-row">
+													<div class="mui-col-sm-3" style="padding: 15px;">
+														概要
+													</div>
+													<div class="mui-col-sm-9" style="padding: 15px;">
+														公司主营业务涉及CRO和CMO两个领域，CRO领域包括临床前的化合物筛选、药物代谢动力学、药物安全性评价以及一些早期临床服务；CMO主要以创新药临床阶段CMC为主，还未涉及商业化阶段。预计公司 2018年至 2020 年净利润分别为2.9、3.6、4.5亿元，考虑可比公司的 PE 水平，给予公司2019年25~30倍PE，我们认为公司的合理价格在13.7~16.5元，建议申购。
+													</div>
+												</div>
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="item2" class="mui-control-content">
+					<div class="mui-row">
+						<div class="mui-col-sm-3" style="margin-left: 20px;">
+							<button id='showforecastInduPicker' class="mui-btn" type='button'>预测行业</button>
+						</div>
+						<div class="mui-col-sm-6">
+							<button id='showInduStartDatePicker' data-options='{"type":"date","beginYear":2014,"endYear":2016}' class="btn mui-btn">2018-01-16</button>
+							<button id='showInduEndDatePicker' data-options='{"type":"date","beginYear":2014,"endYear":2020}' class="btn mui-btn">2019-01-16</button>
+						</div>
+					</div>
+					<div class="chart" id="industryForecastChart"></div>
+					<div class="mui-card" style="margin-top: 0px;">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-collapse list-title">
+								<div class="mui-row">
+									<div class="mui-col-sm-3">
+												预测行业  
+									</div>
+									<div class="mui-col-sm-3">
+												开始日期   
+									</div>
+									<div class="mui-col-sm-2">
+												期限   
+									</div>
+									<div class="mui-col-sm-2">
+												预测建议   
+									</div>
+									<div class="mui-col-sm-2">
+												收益率   
+									</div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse">
+								<a class="mui-navigate-right" href="#">
+									<div class="mui-row">
+										<div class="mui-col-sm-3">
+													医药生物  
+										</div>
+										<div class="mui-col-sm-3">
+													2018-01-10   
+										</div>
+										<div class="mui-col-sm-2">
+													3   
+										</div>
+										<div class="mui-col-sm-2">
+													中性   
+										</div>
+										<div class="mui-col-sm-2">
+													-0.38%   
+										</div>
+									</div>
+								</a>
+								<div class="mui-collapse-content">
+									<div class="mui-content-padded">
+										<div class="chart" id="industryForecastTraceChart" style="width: 400px;"></div>
+									</div>
+									<div>
+										2019Q1医药行业在政策端和业绩端有一定的压力。在政策端来看，药品全国带量采购政策已经落地，但后续各省市的联动仍有待观察；耗材部分近期各省陆续出台集采降价政策，Q1预计会看到具体的降幅数据；重点用药目录监控政策也有望在Q1出最终的名单。在业绩端来看，2018Q1是医药行业近年来增速最快的季度，有流感和大宗原料药涨价的双重促进；2019Q1在新一轮招标降价的基础上，叠加去年高基数影响，表观业绩端增速承压。
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="item3" class="mui-control-content">
+					<div class="mui-row">
+						<div class="mui-col-sm-3" style="margin-left: 20px;">
+							<button id='showforecastStockPicker' class="mui-btn" type='button'>预测股票</button>
+						</div>
+						<div class="mui-col-sm-6">
+							<button id='showStockStartDatePicker' data-options='{"type":"date","beginYear":1900,"endYear":2100}' class="btn mui-btn">2018-01-16</button>
+							<button id='showStockEndDatePicker' data-options='{"type":"date","beginYear":1900,"endYear":2100}' class="btn mui-btn">2019-01-16</button>
+						</div>
+					</div>
+					<div class="chart" id="stockForecastChart"></div>
+					<div class="mui-card" style="margin-top: 0px;">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-collapse list-title">
+								<div class="mui-row">
+									<div class="mui-col-sm-3">
+												预测股票  
+									</div>
+									<div class="mui-col-sm-3">
+												预测日期   
+									</div>
+									<div class="mui-col-sm-2">
+												期限   
+									</div>
+									<div class="mui-col-sm-2">
+												预测建议   
+									</div>
+									<div class="mui-col-sm-2">
+												收益率  
+									</div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse">
+								<a class="mui-navigate-right" href="#">
+									<div class="mui-row">
+										<div class="mui-col-sm-3">
+													贵州茅台  
+										</div>
+										<div class="mui-col-sm-3">
+													2018-01-14   
+										</div>
+										<div class="mui-col-sm-2">
+													3   
+										</div>
+										<div class="mui-col-sm-2">
+													中性   
+										</div>
+										<div class="mui-col-sm-2">
+													0.33%   
+										</div>
+									</div>
+								</a>
+								<div class="mui-collapse-content">
+									<div class="mui-input-group">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" style="padding: 15px;">
+												目标价
+											</div>
+											<div class="mui-col-sm-9" style="padding: 15px;">
+												230
+											</div>
+										</div>
+										<div class="mui-input-row" style="height: 1px;"></div>
+										<div class="mui-row">
+											<div class="mui-col-sm-3" style="padding: 15px;">
+												目标收益率
+											</div>
+											<div class="mui-col-sm-9" style="padding: 15px;">
+												21.3%
+											</div>
+										</div>
+										<div class="mui-input-row" style="height: 1px;"></div>
+										<div class="mui-row">
+											<div class="mui-col-sm-3" style="padding: 15px;">
+												深度报告
+											</div>
+											<div class="mui-col-sm-9" style="padding: 15px;">
+												<a style="margin-left: 0px;padding-left: 0px;margin-top:;">深振业深度研究报告</a>
+											</div>
+										</div>
+										<div class="mui-input-row" style="height: 1px;"></div>
+										<div class="mui-row">
+											<div class="mui-col-sm-3" style="padding: 15px;">
+												建议说明
+											</div>
+											<div class="mui-col-sm-9" style="padding: 15px;">
+												子行业景气度分化比较大，整体维持中性。（1）游戏增持。弹性板块，与经济周期关系比较弱；版号放开，行业恢复15%-20%的增长，有游戏储备的公司盈利和估值修复。（2）出版增持。防御型板块，增长稳定，资产安全，部分有提价逻辑。（3）影视低配，电视剧量价齐跌，剧荒+下游视频平台压售价、电视台回款较差；电影长线10%的低增长；院线单银幕产出持续下滑。（4）广告营销低配，与经济周期相关度较高。（5）广电中性。广电申请5G牌照，但是全国一网整合难度较大，具体实施需要保持跟踪。
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+							
+							<li class="mui-table-view-cell mui-collapse">
+								<a class="mui-navigate-right" href="#">
+									<div class="mui-row">
+										<div class="mui-col-sm-3">
+													东北制药  
+										</div>
+										<div class="mui-col-sm-3">
+													2018-01-09   
+										</div>
+										<div class="mui-col-sm-2">
+													3   
+										</div>
+										<div class="mui-col-sm-2">
+													减持   
+										</div>
+										<div class="mui-col-sm-2">
+													-2.33%   
+										</div>
+									</div>
+								</a>
+								<div class="mui-collapse-content">
+									<div class="mui-input-group">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" style="padding: 15px;">
+												目标价
+											</div>
+											<div class="mui-col-sm-9" style="padding: 15px;">
+												1024
+											</div>
+										</div>
+										<div class="mui-input-row" style="height: 1px;"></div>
+										<div class="mui-row">
+											<div class="mui-col-sm-3" style="padding: 15px;">
+												目标收益率
+											</div>
+											<div class="mui-col-sm-9" style="padding: 15px;">
+												21.3%
+											</div>
+										</div>
+										<div class="mui-input-row" style="height: 1px;"></div>
+										<div class="mui-row">
+											<div class="mui-col-sm-3" style="padding: 15px;">
+												深度报告
+											</div>
+											<div class="mui-col-sm-9" style="padding: 15px;">
+												<a style="margin-left: 0px;padding-left: 0px;margin-top:;">安迪：恒生电子深度报告</a>
+											</div>
+										</div>
+										<div class="mui-input-row" style="height: 1px;"></div>
+										<div class="mui-row">
+											<div class="mui-col-sm-3" style="padding: 15px;">
+												建议说明
+											</div>
+											<div class="mui-col-sm-9" style="padding: 15px;">
+												2019Q1医药行业在政策端和业绩端有一定的压力。在政策端来看，药品全国带量采购政策已经落地，但后续各省市的联动仍有待观察；耗材部分近期各省陆续出台集采降价政策，Q1预计会看到具体的降幅数据；重点用药目录监控政策也有望在Q1出最终的名单。在业绩端来看，2018Q1是医药行业近年来增速最快的季度，有流感和大宗原料药涨价的双重促进；2019Q1在新一轮招标降价的基础上，叠加去年高基数影响，表观业绩端增速承压。
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="item4" class="mui-control-content">
+					<ul class="mui-table-view mui-table-view-chevron">
+						<li class="mui-table-view-cell mui-media">
+							<a class="mui-navigate-right">
+								<div class="mui-media-body">
+									2019年01月15
+									<p class='mui-ellipsis'> 艾德生物调研.</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a class='mui-navigate-right' href="javascript:;">
+								<div class="mui-media-body">
+									2019年01月14
+									<p class='mui-ellipsis'>嘉林药业董事长调研</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a class="mui-navigate-right">
+								<div class="mui-media-body">
+									2019年01月08
+									<p class='mui-ellipsis'>中银国际策略会</p>
+								</div>
+							</a>
+						</li>
+						<li class="mui-table-view-cell mui-media">
+							<a class="mui-navigate-right">
+								<div class="mui-media-body">
+									2019年01月07
+									<p class='mui-ellipsis'>国药股份调研</p>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<div class="mui-content-padded">
+						<ul class="mui-pager">
+							<li class="mui-previous">
+								<a href="#">
+									上一周
+								</a>
+							</li>
+							<li class="mui-next">
+								<a href="#">
+									下一周
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../libs/echarts.min.js"></script>
+		<!-- <script src="../js/mui.picker.js"></script> -->
+		<script src="../js/mui.poppicker.js"></script>
+		<script src="../js/mui.picker.min.js"></script>
+		<script src="../libs/test_data.js"></script>
+		<script>
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+			(function($,doc) {
+				  //document.getElementById("industryForecastChart").classList.add('chartWidth');
+				$('#scroll').scroll({
+					indicators: true //是否显示滚动条
+				});
+				
+				drawStockForecast();
+				drawInduForecast();
+				var segmentedControl = document.getElementById('segmentedControl');
+				mui(".mui-segmented-control").on('tap','.mui-control-item',function(){
+					
+					 //echarts.getInstanceByDom(document.getElementById("researchReportChart")).resize();
+					 //echarts.getInstanceByDom(document.getElementById("industryForecastChart")).resize();
+					 //echarts.getInstanceByDom(document.getElementById("stockForecastChart")).resize();
+				});
+				mui(".mui-table-view").on('tap','.mui-navigate-right',function(){
+				 	drawInduForecastTrace();
+					//echarts.getInstanceByDom(document.getElementById("industryForecastTraceChart")).resize();
+				 	
+				 })
+				 
+				 $.ready(function() {
+				 	/**
+				 	 * 获取对象属性的值
+				 	 * 主要用于过滤三级联动中，可能出现的最低级的数据不存在的情况，实际开发中需要注意这一点；
+				 	 * @param {Object} obj 对象
+				 	 * @param {String} param 属性名
+				 	 */
+				 	var _getParam = function(obj, param) {
+				 		return obj[param] || '';
+				 	};
+				 	//普通示例
+					/* -------------------研报类型----------------------- */
+				 	var reportTypePicker = new $.PopPicker();
+				 	reportTypePicker.setData([{
+				 		value: 'all',
+				 		text: '全部报告'
+				 	}, {
+				 		value: 'trace',
+				 		text: '跟踪报告'
+				 	}, {
+				 		value: 'research',
+				 		text: '调研报告'
+				 	}, {
+				 		value: 'deep',
+				 		text: '深度报告'
+				 	}, {
+				 		value: 'meeting',
+				 		text: '会议报告'
+				 	}]);
+				 	var showReportTypeButton = doc.getElementById('showReportTypePicker');
+				 	showReportTypeButton.addEventListener('tap', function(event) {
+				 		reportTypePicker.show(function(items) {
+							var text=JSON.stringify(items[0]['text'])
+							text=text.replace(/"/g,"");
+							showReportTypeButton.innerText=text;
+				 			//返回 false 可以阻止选择框的关闭
+				 			//return false;
+				 		});
+				 	}, false);
+					/* ----------------------预测的行业---------------------------- */
+					var forecastInduPicker = new $.PopPicker();
+					forecastInduPicker.setData([{
+						value: '801780.SI',
+						text: '银行'
+					}, {
+						value: '801150.SI',
+						text: '医药生物'
+					}, {
+						value: '801020.SI',
+						text: '采掘'
+					}]);
+					var showforecastInduButton = doc.getElementById('showforecastInduPicker');
+					showforecastInduButton.addEventListener('tap', function(event) {
+						forecastInduPicker.show(function(items) {
+							var text=JSON.stringify(items[0]['text'])
+							text=text.replace(/"/g,"");
+							showforecastInduButton.innerText=text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					/* ----------------------预测的股票---------------------------- */
+					var forecastStockPicker = new $.PopPicker();
+					forecastStockPicker.setData([{
+						value: '600276.SH',
+						text: '恒瑞医药'
+					}, {
+						value: '600600.SH',
+						text: '青岛啤酒'
+					}, {
+						value: '002415.SZ',
+						text: '海康威视'
+					}, {
+						value: '001899.SZ',
+						text: '英斯派'
+					}, {
+						value: '300760.SZ',
+						text: '迈瑞医疗'
+					}]);
+					var showforecastStockButton = doc.getElementById('showforecastStockPicker');
+					showforecastStockButton.addEventListener('tap', function(event) {
+						forecastStockPicker.show(function(items) {
+							var text=JSON.stringify(items[0]['text'])
+							text=text.replace(/"/g,"");
+							showforecastStockButton.innerText=text;
+							//返回 false 可以阻止选择框的关闭
+							//return false;
+						});
+					}, false);
+					/* ----------------------时间---------------------------- */
+					var btns = $('.btn');
+					btns.each(function(i, btn) {
+						btn.addEventListener('tap', function() {
+							var _self = this;
+							if(_self.picker) {
+								_self.picker.show(function (rs) {
+									btn.innerText =rs.text;
+									_self.picker.dispose();
+									_self.picker = null;
+								});
+							} else {
+								var optionsJson = this.getAttribute('data-options') || '{}';
+								var options = JSON.parse(optionsJson);
+								var id = this.getAttribute('id');
+								_self.picker = new $.DtPicker(options);
+								_self.picker.show(function(rs) {
+									btn.innerText = rs.text;
+									_self.picker.dispose();
+									_self.picker = null;
+								});
+							}
+						}, false); 
+					});
+					
+					
+				 });
+			})(mui,document);
+			
+			
+			var researchReportOption={
+				legend: {
+					data: ['研报统计']
+				},
+				grid: {
+					x: 35,
+					y: 35,
+					x2:20,
+					y2:35
+				},
+				tooltip: {trigger: 'axis'},
+				toolbox: {
+					show: false,
+				},
+				xAxis: [{
+					type: 'category',
+					data: ['201901']
+				}],
+				yAxis: [{
+					type: 'value',
+					splitArea: {
+						show: true
+					}
+				}],
+				series: [{
+					name: '研报统计',
+					type: 'bar',
+					barWidth : 20,
+					data: [3]
+				}]
+			}
+			var researchReportChart = echarts.init(document.getElementById("researchReportChart"));
+			researchReportChart.setOption(researchReportOption);
+			
+		
+			function drawInduForecast(){
+				var o = document.getElementById("researchReportChart");
+				var w = o.clientWidth||o.offsetWidth;
+				document.getElementById("industryForecastChart").style.width=w+"px";
+				  var dte=[];
+				  var data=[];
+				  for(var i=0;i<induForecastData.length;i++){
+					  dte.push(induForecastData[i].inDateStr);
+					  data.push(induForecastData[i].close);
+				  }
+				  var industryForecastOption={
+					legend: {
+						data: ['医药生物']
+					},
+					tooltip: {trigger: 'axis'},
+					toolbox: {
+						show: false,
+					},
+					grid: [{
+						containLabel: true,
+						left: 20,
+						right: 20,
+						top: 30,
+						bottom: 30
+					}],
+					xAxis: [{
+						type: 'category',
+						data:dte
+					}],
+					yAxis: [{
+						type: 'value',
+					}],
+					series: [{
+						name: '医药生物',
+						type: 'line',
+						data:data
+					}]
+				  }
+				//  document.getElementById("industryForecastChart").classList.add('chartWidth');
+				  var industryForecastChart = echarts.init(document.getElementById("industryForecastChart"));
+				  industryForecastChart.setOption(industryForecastOption);
+			}
+			
+			function drawStockForecast(){
+				var o = document.getElementById("researchReportChart");
+				var w = o.clientWidth||o.offsetWidth;
+				document.getElementById("stockForecastChart").style.width=w+"px";
+				  var dte=[];
+				  var data=[];
+				  for(var i=0;i<stockForecastData.length;i++){
+					  dte.push(stockForecastData[i].inDateStr);
+					  data.push(stockForecastData[i].close);
+				  }
+				  var stockForecastOption={
+					legend: {
+						data: ['恒瑞医药']
+					},
+					tooltip: {trigger: 'axis'},
+					toolbox: {
+						show: false,
+					},
+					grid: [{
+						containLabel: true,
+						left: 20,
+						right: 20,
+						top: 30,
+						bottom: 30
+					}],
+					xAxis: [{
+						type: 'category',
+						data:dte
+					}],
+					yAxis: [{
+						type: 'value',
+					}],
+					series: [{
+						name: '恒瑞医药',
+						type: 'line',
+						data:data
+					}]
+				  }
+				  var stockForecastChart = echarts.init(document.getElementById("stockForecastChart"));
+				  stockForecastChart.setOption(stockForecastOption);
+			}
+			
+			function drawInduForecastTrace(){
+				var o = document.getElementById("researchReportChart");
+				var w = o.clientWidth||o.offsetWidth;
+				document.getElementById("industryForecastTraceChart").style.width=(w-80)+"px";
+				  var dte=[];
+				  var data=[];
+				  for(var i=0;i<industryForecastTrace.length;i++){
+					  dte.push(industryForecastTrace[i].pubdate);
+					  data.push(industryForecastTrace[i].dRate);
+				  }
+				  var industryForecastTraceOption={
+					legend: {
+						data: ['收益率']
+					},
+					tooltip: {trigger: 'axis'},
+					toolbox: {
+						show: false,
+					},
+					grid: [{
+						containLabel: true,
+						left: 0,
+						right: 20,
+						top: 30,
+						bottom: 30
+					}],
+					xAxis: [{
+						type: 'category',
+						data:dte
+					}],
+					yAxis: [{
+						type: 'value',
+					}],
+					series: [{
+						name: '收益率',
+						type: 'line',
+						data:data
+					}]
+				  }
+				  var industryForecastTraceChart = echarts.init(document.getElementById("industryForecastTraceChart"));
+				  industryForecastTraceChart.setOption(industryForecastTraceOption);
+			}
+		</script>
+
+	</body>
+
+</html>

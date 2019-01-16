@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>组合详情</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+		<!--标准mui.css-->
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" type="text/css" href="../css/mui.picker.min.css" />
+		<link rel="stylesheet" href="../css/app-common.css">
+		<!--App自定义的css-->
+		<link rel="stylesheet" type="text/css" href="../css/app.css" />
+		<style>
+			
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">组合详情</h1>
+		</header>
+		<div class="mui-content">
+			<div class="mui-card">
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<div>
+							<div class="mui-row">
+								<div class="mui-col-sm-9" >
+									<div class="mui-row">
+										<div class="mui-col-sm-12" >
+											  有色组合[有色金属] 2019-01-14  
+										</div>
+									</div>
+									<div class="mui-row" style="margin-top: 10px;">
+										<div class="mui-col-sm-12" >
+											   <div style="font-size: 65px;margin-left: 20px;margin-top: 20px;" id="mock_day_income">0.15%<span style="font-size: 14px"> &nbsp; &nbsp;日收益率</span></div>
+										</div>
+									</div>
+								</div>
+								<div class="mui-col-sm-3" >
+									  <div class="chart" style="width: 100px;height:100px;" id="turnoverChart"></div>
+								</div>
+							</div>
+							<div class="mui-row" style="margin-top: 10px;">
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell list-title" style="margin: 3px;padding: 3px;">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" >
+														资产点位  
+											</div>
+											<div class="mui-col-sm-3">
+														季收益率 
+											</div>
+											<div class="mui-col-sm-3">
+														季基准收益率    
+											</div>
+											<div class="mui-col-sm-3">
+														季超额收益率
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell" style="margin: 3px;padding: 3px;">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" >
+														979.67  
+											</div>
+											<div class="mui-col-sm-3">
+														-2.03% 
+											</div>
+											<div class="mui-col-sm-3">
+														3.53%
+											</div>
+											<div class="mui-col-sm-3">
+														-5.57%
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell list-title" style="margin: 3px;padding: 3px;">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" >
+														月换手次数  
+											</div>
+											<div class="mui-col-sm-3">
+														累计收益率 
+											</div>
+											<div class="mui-col-sm-3">
+														累计基准收益率    
+											</div>
+											<div class="mui-col-sm-3">
+														累计超额收益率
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell" style="margin: 3px;padding: 3px;">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" >
+														2  
+											</div>
+											<div class="mui-col-sm-3">
+														-2.03% 
+											</div>
+											<div class="mui-col-sm-3">
+														3.53% 
+											</div>
+											<div class="mui-col-sm-3">
+														-5.57%
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="mui-card">
+				<div class="mui-card-header">收益曲线
+				<button id='showIncomeLineDatePicker'  class="mui-btn">一年</button>
+				</div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<div class="chart" id="lineChart"></div>
+					</div>
+				</div>
+				<div class="mui-card-footer" style="width: 100%;">
+					<ul class="mui-table-view" style="width: 100%;"> 
+						<li class="mui-table-view-cell mui-collapse">
+							<a href="#">收益数据</a>
+							<div class="mui-collapse-content" >
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell list-title">
+										<div class="mui-row">
+											<div class="mui-col-sm-2" >
+														日期  
+											</div>
+											<div class="mui-col-sm-2">
+														模拟点位 
+											</div>
+											<div class="mui-col-sm-3">
+														模拟收益率    
+											</div>
+											<div class="mui-col-sm-2">
+														基准点位
+											</div>
+											<div class="mui-col-sm-3">
+														基准收益率  
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" >
+														2019-01-14  
+											</div>
+											<div class="mui-col-sm-2">
+														979.67 
+											</div>
+											<div class="mui-col-sm-2">
+														0.15%    
+											</div>
+											<div class="mui-col-sm-2">
+														2530.99
+											</div>
+											<div class="mui-col-sm-2">
+														-0.08%  
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" >
+														2019-01-13  
+											</div>
+											<div class="mui-col-sm-2">
+														979.67 
+											</div>
+											<div class="mui-col-sm-2">
+														0.15%    
+											</div>
+											<div class="mui-col-sm-2">
+														2530.99
+											</div>
+											<div class="mui-col-sm-2">
+														-0.08%  
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" >
+														2019-01-12  
+											</div>
+											<div class="mui-col-sm-2">
+														979.67 
+											</div>
+											<div class="mui-col-sm-2">
+														0.15%    
+											</div>
+											<div class="mui-col-sm-2">
+														2530.99
+											</div>
+											<div class="mui-col-sm-2">
+														-0.08%  
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" >
+														2019-01-11  
+											</div>
+											<div class="mui-col-sm-2">
+														979.67 
+											</div>
+											<div class="mui-col-sm-2">
+														0.15%    
+											</div>
+											<div class="mui-col-sm-2">
+														2530.99
+											</div>
+											<div class="mui-col-sm-2">
+														-0.08%  
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" >
+														2019-01-10  
+											</div>
+											<div class="mui-col-sm-2">
+														979.67 
+											</div>
+											<div class="mui-col-sm-2">
+														0.15%    
+											</div>
+											<div class="mui-col-sm-2">
+														2530.99
+											</div>
+											<div class="mui-col-sm-2">
+														-0.08%  
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" >
+														2019-01-09  
+											</div>
+											<div class="mui-col-sm-2">
+														979.67 
+											</div>
+											<div class="mui-col-sm-2">
+														0.15%    
+											</div>
+											<div class="mui-col-sm-2">
+														2530.99
+											</div>
+											<div class="mui-col-sm-2">
+														-0.08%  
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" >
+														2019-01-08 
+											</div>
+											<div class="mui-col-sm-2">
+														979.67 
+											</div>
+											<div class="mui-col-sm-2">
+														0.15%    
+											</div>
+											<div class="mui-col-sm-2">
+														2530.99
+											</div>
+											<div class="mui-col-sm-2">
+														-0.08%  
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" >
+														2019-01-07  
+											</div>
+											<div class="mui-col-sm-2">
+														979.67 
+											</div>
+											<div class="mui-col-sm-2">
+														0.15%    
+											</div>
+											<div class="mui-col-sm-2">
+														2530.99
+											</div>
+											<div class="mui-col-sm-2">
+														-0.08%  
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" >
+														2019-01-06 
+											</div>
+											<div class="mui-col-sm-2">
+														979.67 
+											</div>
+											<div class="mui-col-sm-2">
+														0.15%    
+											</div>
+											<div class="mui-col-sm-2">
+														2530.99
+											</div>
+											<div class="mui-col-sm-2">
+														-0.08%  
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-row">
+											<div class="mui-col-sm-3" >
+														2019-01-05  
+											</div>
+											<div class="mui-col-sm-2">
+														979.67 
+											</div>
+											<div class="mui-col-sm-2">
+														0.15%    
+											</div>
+											<div class="mui-col-sm-2">
+														2530.99
+											</div>
+											<div class="mui-col-sm-2">
+														-0.08%  
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="mui-card">
+				<div class="mui-card-header">月收益</div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<div class="chart" id="barChart"></div>
+					</div>
+				</div>
+				<div class="mui-card-footer" style="width: 100%;">
+					<ul class="mui-table-view" style="width: 100%;"> 
+						<li class="mui-table-view-cell mui-collapse">
+							<a href="#">月收益数据</a>
+							<div class="mui-collapse-content" >
+								<ul class="mui-table-view">
+									<li class="mui-table-view-cell list-title">
+										<div class="mui-row">
+											<div class="mui-col-sm-2" >
+														一月  
+											</div>
+											<div class="mui-col-sm-2">
+														二月 
+											</div>
+											<div class="mui-col-sm-2">
+														三月    
+											</div>
+											<div class="mui-col-sm-2">
+														四月
+											</div>
+											<div class="mui-col-sm-2">
+														五月 
+											</div>
+											<div class="mui-col-sm-2">
+														六月  
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-row">
+											<div class="mui-col-sm-2" >
+														1.13%  
+											</div>
+											<div class="mui-col-sm-2">
+														- 
+											</div>
+											<div class="mui-col-sm-2">
+														-    
+											</div>
+											<div class="mui-col-sm-2">
+														-
+											</div>
+											<div class="mui-col-sm-2">
+														-  
+											</div>
+											<div class="mui-col-sm-2">
+														-  
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell list-title">
+										<div class="mui-row">
+											<div class="mui-col-sm-2" >
+														七月  
+											</div>
+											<div class="mui-col-sm-2">
+														八月 
+											</div>
+											<div class="mui-col-sm-2">
+														九月    
+											</div>
+											<div class="mui-col-sm-2">
+														十月
+											</div>
+											<div class="mui-col-sm-2">
+														十一月 
+											</div>
+											<div class="mui-col-sm-2">
+														十二月  
+											</div>
+										</div>
+									</li>
+									<li class="mui-table-view-cell">
+										<div class="mui-row">
+											<div class="mui-col-sm-2" >
+														-  
+											</div>
+											<div class="mui-col-sm-2">
+														- 
+											</div>
+											<div class="mui-col-sm-2">
+														-    
+											</div>
+											<div class="mui-col-sm-2">
+														-
+											</div>
+											<div class="mui-col-sm-2">
+														-  
+											</div>
+											<div class="mui-col-sm-2">
+														-  
+											</div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="mui-card">
+				<div class="mui-card-header">持仓 2019-01-14</div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<div class="chart" id="pieChart"></div>
+					</div>
+				</div>
+			</div>
+			<div class="mui-card">
+				<div class="mui-card-header">
+					股票持仓
+					<button id='showStockPositionDatePicker' data-options='{"type":"date","beginYear":1900,"endYear":2100}' class="btn mui-btn">2018-01-14</button>
+				</div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-collapse list-title">
+								<div class="mui-row">
+									<div class="mui-col-sm-3">
+												股票名称  
+									</div>
+									<div class="mui-col-sm-3">
+												股票代码
+									</div>
+									<div class="mui-col-sm-3">
+												日收益率   
+									</div>
+									<div class="mui-col-sm-3">
+												持仓占比   
+									</div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse">
+								<a class="mui-navigate-right" id="test" href="#">
+									<div class="mui-row">
+										<div class="mui-col-sm-3">
+													山东黄金  
+										</div>
+										<div class="mui-col-sm-3">
+													600547.SH 
+										</div>
+										<div class="mui-col-sm-3">
+													-0.39%   
+										</div>
+										<div class="mui-col-sm-3">
+													34.12%   
+										</div>
+									</div>
+								</a>
+								<div class="mui-collapse-content">
+									<div>
+										结算日期[2019-01-14] 股票[山东黄金] 日初权重[34.30%] T日收盘价[30.33] T日前收盘价[30.45] 收益率[-0.39%] 收益率贡献(34.30%)*(-0.39%)=(-0.14%)
+									</div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse">
+								<a class="mui-navigate-right" id="test" href="#">
+									<div class="mui-row">
+										<div class="mui-col-sm-3">
+													厦门钨业  
+										</div>
+										<div class="mui-col-sm-3">
+													600549.SH 
+										</div>
+										<div class="mui-col-sm-3">
+													0.82%   
+										</div>
+										<div class="mui-col-sm-3">
+													34.81%   
+										</div>
+									</div>
+								</a>
+								<div class="mui-collapse-content">
+									<div>
+										结算日期[2019-01-14] 股票[厦门钨业] 日初权重[34.58%] T日收盘价[12.36] T日前收盘价[12.26] 收益率[0.82%] 收益率贡献(34.58%)*(0.82%)=(0.28%)
+									</div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse">
+								<a class="mui-navigate-right" id="test" href="#">
+									<div class="mui-row">
+										<div class="mui-col-sm-3">
+													紫金矿业  
+										</div>
+										<div class="mui-col-sm-3">
+													601899.SH 
+										</div>
+										<div class="mui-col-sm-3">
+													-0.00%   
+										</div>
+										<div class="mui-col-sm-3">
+													31.07%   
+										</div>
+									</div>
+								</a>
+								<div class="mui-collapse-content">
+									<div>
+										结算日期[2019-01-14] 股票[紫金矿业] 日初权重[31.12%] T日收盘价[3.05] T日前收盘价[3.05] 收益率[0.00%] 收益率贡献(31.12%)*(0.00%)=(0.00%)
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="mui-card">
+				<div class="mui-card-header">调仓记录
+					<button id='showStockPositionRecordDatePicker'  class="mui-btn">2018-01-08</button>
+				</div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-collapse list-title">
+								<div class="mui-row">
+									<div class="mui-col-sm-2">
+												买卖  
+									</div>
+									<div class="mui-col-sm-2">
+												股票名称 
+									</div>
+									<div class="mui-col-sm-3">
+												提交时间   
+									</div>
+									<div class="mui-col-sm-3">
+												成交时间  
+									</div>
+									<div class="mui-col-sm-2">
+												调仓状态  
+									</div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse ">
+								<a class="mui-navigate-right" id="test" href="#">
+									<div class="mui-row">
+										<div class="mui-col-sm-2">
+													持有  
+										</div>
+										<div class="mui-col-sm-2">
+													仁和药业 
+										</div>
+										<div class="mui-col-sm-3">
+													2019-01-08   
+										</div>
+										<div class="mui-col-sm-3">
+													2019-01-1   
+										</div>
+										<div class="mui-col-sm-2">
+													成功  
+										</div>
+									</div>
+								</a>
+								<div class="mui-collapse-content">
+									<div>
+										结算日期[2019-01-11] 股票[仁和药业]: T-1日权重[20.24%] 调整后权重[25.00%] 换手率贡献[2.38%] T日收盘价[5.45] T日前收盘价[5.44] 日收益率[0.18%], T-1日收盘价[5.44] T-1日前收盘价[5.52] 日收益率[-1.45%], T-2日收盘价[5.52] T-2日前收盘价[5.47] 日收益率[0.91%], 几何平均收益率{{[1+(0.18%)]*[1+(-1.45%)]*[1+(0.91%)]}^(1/3)-1}=[-0.12%] 收益率贡献(-0.12%)*(25.00%)=-0.03%
+									</div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse">
+								<a class="mui-navigate-right" id="test" href="#">
+									<div class="mui-row">
+										<div class="mui-col-sm-2">
+													卖  
+										</div>
+										<div class="mui-col-sm-2">
+													广誉远	 
+										</div>
+										<div class="mui-col-sm-3">
+													2019-01-08   
+										</div>
+										<div class="mui-col-sm-3">
+													2019-01-1   
+										</div>
+										<div class="mui-col-sm-2">
+													成功  
+										</div>
+									</div>
+								</a>
+								<div class="mui-collapse-content">
+									<div>
+										结算日期[2019-01-11] 股票[广誉远]卖出成功, T-1日权重[18.52%] 调整后权重[0.00%] 换手率贡献[9.26%]
+									</div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse">
+								<a class="mui-navigate-right" id="test" href="#">
+									<div class="mui-row">
+										<div class="mui-col-sm-2">
+													卖  
+										</div>
+										<div class="mui-col-sm-2">
+													恒瑞医药		 
+										</div>
+										<div class="mui-col-sm-3">
+													2019-01-08   
+										</div>
+										<div class="mui-col-sm-3">
+													2019-01-1   
+										</div>
+										<div class="mui-col-sm-2">
+													成功  
+										</div>
+									</div>
+								</a>
+								<div class="mui-collapse-content">
+									<div>
+										结算日期[2019-01-11] 股票[恒瑞医药]: T-1日权重[21.75%] 调整后权重[25.00%] 换手率贡献[1.63%] T日收盘价[55.95] T日前收盘价[56.27] 日收益率[-0.57%], T-1日收盘价[56.27] T-1日前收盘价[55.53] 日收益率[1.33%], T-2日收盘价[55.53] T-2日前收盘价[53.98] 日收益率[2.87%], 几何平均收益率{{[1+(-0.57%)]*[1+(1.33%)]*[1+(2.87%)]}^(1/3)-1}=[1.20%] 收益率贡献(1.20%)*(25.00%)=0.30%
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="mui-card">
+				<div class="mui-card-header">调仓中</div>
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell mui-collapse list-title">
+								<div class="mui-row">
+									<div class="mui-col-sm-3">
+												买卖  
+									</div>
+									<div class="mui-col-sm-3">
+												股票名称	 
+									</div>
+									<div class="mui-col-sm-3">
+												股票代码   
+									</div>
+									<div class="mui-col-sm-3">
+												提交时间   
+									</div>
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse mui-active">
+								<a class="mui-navigate-right" id="test" href="#">
+									2019-01-14
+								</a>
+								<div class="mui-collapse-content">
+									<ul class="mui-table-view">
+										<li class="mui-table-view-cell mui-collapse">
+											<div class="mui-row">
+												<div class="mui-col-sm-3">
+															卖  
+												</div>
+												<div class="mui-col-sm-3">
+															山东黄金	 
+												</div>
+												<div class="mui-col-sm-3">
+															600547.SH   
+												</div>
+												<div class="mui-col-sm-3">
+															2019-01-14   
+												</div>
+											</div>
+										</li>
+										<li class="mui-table-view-cell mui-collapse">
+											<div class="mui-row">
+												<div class="mui-col-sm-3">
+															卖  
+												</div>
+												<div class="mui-col-sm-3">
+															厦门钨业	 
+												</div>
+												<div class="mui-col-sm-3">
+															600549.SH   
+												</div>
+												<div class="mui-col-sm-3">
+															2019-01-14   
+												</div>
+											</div>
+										</li>
+										<li class="mui-table-view-cell mui-collapse">
+											<div class="mui-row">
+												<div class="mui-col-sm-3">
+															买  
+												</div>
+												<div class="mui-col-sm-3">
+															明泰铝业	 
+												</div>
+												<div class="mui-col-sm-3">
+															600456.SH   
+												</div>
+												<div class="mui-col-sm-3">
+															2019-01-14   
+												</div>
+											</div>
+										</li>
+									</ul>	
+								</div>
+							</li>
+							<li class="mui-table-view-cell mui-collapse">
+								<a class="mui-navigate-right" id="test" href="#">
+									2019-01-13
+								</a>
+								<div class="mui-collapse-content">
+									<ul class="mui-table-view">
+										<li class="mui-table-view-cell mui-collapse">
+											<div class="mui-row">
+												<div class="mui-col-sm-3">
+															卖  
+												</div>
+												<div class="mui-col-sm-3">
+															山东黄金	 
+												</div>
+												<div class="mui-col-sm-3">
+															600547.SH   
+												</div>
+												<div class="mui-col-sm-3">
+															2019-01-14   
+												</div>
+											</div>
+										</li>
+										<li class="mui-table-view-cell mui-collapse">
+											<div class="mui-row">
+												<div class="mui-col-sm-3">
+															卖  
+												</div>
+												<div class="mui-col-sm-3">
+															厦门钨业	 
+												</div>
+												<div class="mui-col-sm-3">
+															600549.SH   
+												</div>
+												<div class="mui-col-sm-3">
+															2019-01-14   
+												</div>
+											</div>
+										</li>
+										<li class="mui-table-view-cell mui-collapse">
+											<div class="mui-row">
+												<div class="mui-col-sm-3">
+															买  
+												</div>
+												<div class="mui-col-sm-3">
+															明泰铝业	 
+												</div>
+												<div class="mui-col-sm-3">
+															600456.SH   
+												</div>
+												<div class="mui-col-sm-3">
+															2019-01-14   
+												</div>
+											</div>
+										</li>
+									</ul>	
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="../js/mui.min.js"></script>
+		<script src="../js/mui.picker.min.js"></script>
+		<script src="../libs/echarts.min.js"></script>
+		<script src="../libs/echarts-liquidfill.js"></script>
+		<script>
+			(function($,doc) {
+				 $.ready(function() { 
+					 /* ----------------------调仓记录---------------------------- */
+					 var stockPositionRecordDatePicker = new $.PopPicker();
+					 stockPositionRecordDatePicker.setData([{
+					 	value: '65',
+					 	text: '2019-01-08'
+					 }, {
+					 	value: '63',
+					 	text: '2019-01-01'
+					 }, {
+					 	value: '54',
+					 	text: '2019-01-23'
+					 }]);
+					 var showstockPositionRecordDateButton = doc.getElementById('showStockPositionRecordDatePicker');
+					 showstockPositionRecordDateButton.addEventListener('tap', function(event) {
+					 	stockPositionRecordDatePicker.show(function(items) {
+					 		var text=JSON.stringify(items[0]['text'])
+					 		text=text.replace(/"/g,"");
+					 		showstockPositionRecordDateButton.innerText=text;
+					 		//返回 false 可以阻止选择框的关闭
+					 		//return false;
+					 	});
+					 }, false);
+					 
+					 /* ----------------------调仓记录---------------------------- */
+					 var incomeLineDatePicker = new $.PopPicker();
+					 incomeLineDatePicker.setData([{
+					 	value: 'threeMonth',
+					 	text: '三个月'
+					 }, {
+					 	value: 'sixMonth',
+					 	text: '六个月'
+					 }, {
+					 	value: 'aYear',
+					 	text: '一年'
+					 }, {
+					 	value: 'all',
+					 	text: '所有'
+					 }]);
+					 var showIncomeLineDateButton = doc.getElementById('showIncomeLineDatePicker');
+					 showIncomeLineDateButton.addEventListener('tap', function(event) {
+					 	incomeLineDatePicker.show(function(items) {
+					 		var text=JSON.stringify(items[0]['text'])
+					 		text=text.replace(/"/g,"");
+					 		showIncomeLineDateButton.innerText=text;
+					 		//返回 false 可以阻止选择框的关闭
+					 		//return false;
+					 	});
+					 }, false);
+					 /* ----------------------时间---------------------------- */
+					 var btns = $('.btn');
+					 btns.each(function(i, btn) {
+					 	btn.addEventListener('tap', function() {
+					 		var _self = this;
+					 		if(_self.picker) {
+					 			_self.picker.show(function (rs) {
+					 				btn.innerText =rs.text;
+					 				_self.picker.dispose();
+					 				_self.picker = null;
+					 			});
+					 		} else {
+					 			var optionsJson = this.getAttribute('data-options') || '{}';
+					 			var options = JSON.parse(optionsJson);
+					 			var id = this.getAttribute('id');
+					 			_self.picker = new $.DtPicker(options);
+					 			_self.picker.show(function(rs) {
+					 				btn.innerText = rs.text;
+					 				_self.picker.dispose();
+					 				_self.picker = null;
+					 			});
+					 		}
+					 	}, false); 
+					 });
+				 });
+				
+			})(mui,document);
+			
+			
+			var getOption = function(chartType) {
+				var chartOption = chartType == 'pie' ? {
+					calculable: false,
+					series: [{
+						name: '访问来源',
+						type: 'pie',
+						radius: '65%',
+						center: ['50%', '50%'],
+						data: [{
+							value: 335,
+							name: '直接访问'
+						}, {
+							value: 310,
+							name: '邮件营销'
+						}, {
+							value: 234,
+							name: '联盟广告'
+						}, {
+							value: 135,
+							name: '视频广告'
+						}, {
+							value: 1548,
+							name: '搜索引擎'
+						}]
+					}]
+				} : {
+					legend: {
+						data: ['蒸发量1', '降水量']
+					},
+					grid: {
+						x: 35,
+						x2: 10,
+						y: 30,
+						y2: 25
+					},
+					toolbox: {
+						show: false,
+						feature: {
+							mark: {
+								show: true
+							},
+							dataView: {
+								show: true,
+								readOnly: false
+							},
+							magicType: {
+								show: true,
+								type: ['line', 'bar']
+							},
+							restore: {
+								show: true
+							},
+							saveAsImage: {
+								show: true
+							}
+						}
+					},
+					calculable: false,
+					xAxis: [{
+						type: 'category',
+						data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+					}],
+					yAxis: [{
+						type: 'value',
+						splitArea: {
+							show: true
+						}
+					}],
+					series: [{
+						name: '蒸发量',
+						type: chartType,
+						data: [2.0, 4.9, 7.0, 23.2, 25.6, 76.7, 135.6, 162.2, 32.6, 20.0, 6.4, 3.3]
+					}, {
+						name: '降水量',
+						type: chartType,
+						data: [2.6, 5.9, 9.0, 26.4, 28.7, 70.7, 175.6, 182.2, 48.7, 18.8, 6.0, 2.3]
+					}]
+				};
+				return chartOption;
+			};
+			
+			function drawturnoverChart(id,data){
+				data=parseFloat(data)
+				var myChart = echarts.init(document.getElementById('turnoverChart'));
+				var option = {
+					series: [{
+						type: 'liquidFill',
+						name: '年换手率',
+						data: [{
+							value:data/4,
+							itemStyle: {
+								color: '#1598ED'
+							}
+						}],
+						radius: '70%',
+						outline: {
+							show: false
+						},
+						label: {
+							fontSize: 15,
+							formatter: function(param){
+								return (param.value*4*100).toFixed(2)+"%";
+							},
+						},
+						backgroundStyle: {
+							color: '#E3F7FF'
+						}
+					}],
+					tooltip: {
+						show: true,
+						formatter: function(param){
+							return param.seriesName+" : "+(param.value*4*100).toFixed(2)+"%";
+						},
+					}
+				};
+				// 使用刚指定的配置项和数据显示图表。
+				myChart.setOption(option);
+			}
+			var byId = function(id) {
+				console.log("获取ID")
+				return document.getElementById(id);
+			};
+			drawturnoverChart("turnoverChart",1.37);
+			var barChart = echarts.init(byId('barChart'));
+			barChart.setOption(getOption('bar'));
+			var lineChart = echarts.init(byId('lineChart'));
+			lineChart.setOption(getOption('line'));
+			var pieChart = echarts.init(byId('pieChart'));
+			pieChart.setOption(getOption('pie'));
+		</script>
+	</body>
+
+</html>

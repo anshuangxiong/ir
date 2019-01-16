@@ -1,0 +1,31 @@
+.list-title{
+	background-color:#f9fafb;
+	font-size : 1em;
+	font-weight:600;
+}
+.ra-search{
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 0px;
+	margin-top: 5px;
+}
+.mock-income{
+	padding-top: 1px;
+	padding-bottom: 3px;
+	font-size: 14px;
+}
+.mock-base{
+	padding-bottom: 0px;
+	padding-top: 2px;
+}
+.mock-cell{
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-right: 0px;
+	padding-left: 8px;
+}
+.chart {
+	height: 200px;
+	margin: 0px;
+	padding: 0px;
+}
